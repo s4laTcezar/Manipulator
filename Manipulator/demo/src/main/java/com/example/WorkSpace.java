@@ -91,8 +91,8 @@ public class WorkSpace {
         //Writes coordinates in the XZ plane to the file
         counter = 0;
         try (CSVWriter writer = new CSVWriter(new FileWriter("pointsXZ.csv"))) {
-            for(double phi2_tmp = phi2_min; phi2_tmp <= 130; phi2_tmp+=1){
-                for(double phi3_tmp = phi2_min; phi3_tmp <= 60; phi3_tmp+=1){
+            for(double phi2_tmp = phi2_min; phi2_tmp <= phi2_max; phi2_tmp+=1){
+                for(double phi3_tmp = phi2_min; phi3_tmp <= phi3_max; phi3_tmp+=1){
                     
                     writer.writeNext(WritePoints(0, phi2_tmp, phi3_tmp, length));
                     counter++;
